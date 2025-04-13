@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"   >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class", // important!
+      };
+    </script>
+  </head>
+  <body>
+    <div class="main bg-gray-100 dark:bg-salt-800 ">
+      <!-- Navbar -->
+      <div
+        class="nav bg-gray-200  text-black fixed duration-150 w-full h-15  flex items-center justify-around px-10 dark:bg-gray-900 dark:text-white"
+      >
+        <h1 class="font-bold text-lg">What your Country</h1>
+        <input class="search bg-white dark:text-black rounded-4xl border-none outline-none h-10 w-100 px-4" placeholder="Search Your Country" type="text">
+        
+         
+        <select class="rounded-md bg-white dark:text-black w-40 h-8 " id="continent">
+          <option value="" disabled selected>Select Region</option>
+          <option value="All">All</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="South America">South America</option>
+          <option value="North America">North America</option>
+          <option value="Europe">Europe</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+        <div class="mode flex gap-2 font-medium cursor-pointer">
+          <i class="ri-moon-fill"></i>mode
+        </div>
+      </div>
+      <!-- hero -->
+      <div class="hero min-h-screen  bg-gray-100 dark:bg-slate-800  flex flex-wrap justify-center pt-20 gap-10">
+        <!-- cards -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
