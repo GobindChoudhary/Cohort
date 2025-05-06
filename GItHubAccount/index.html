@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+      body {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        min-height: 100vh;
+        font-family: "Poppins", sans-serif;
+        color: #e5e7eb;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      }
+      .hover-scale {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .hover-scale:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+      input:focus {
+        outline: none;
+        border-color: #4b5563;
+      }
+      ::placeholder {
+        color: #9ca3af;
+        opacity: 1;
+      }
+      .premium-button {
+        background: #1f2937;
+        border: 1px solid #4b5563;
+      }
+      .premium-button:hover {
+        background: #374151;
+        border-color: #6b7280;
+      }
+      .divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center p-6">
+    <div class="w-full max-w-4xl space-y-6">
+      <h1 class="text-center text-3xl font-bold text-gray-300">
+        GitHub User Finder
+      </h1>
+      <!-- Search Bar -->
+      <div class="glass-effect rounded-lg p-5 hover-scale">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Enter GitHub username..."
+            class="input w-full bg-transparent text-white text-base py-3 px-4 rounded-md border border-gray-700 focus:border-gray-600 transition-colors"
+          />
+          <button
+            class="search absolute right-2 top-1/2 transform -translate-y-1/2 premium-button text-white px-5 py-2 rounded-md transition-colors font-medium text-sm"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- User Profile Card -->
+      <div class="card glass-effect rounded-lg p-8 hover-scale"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
